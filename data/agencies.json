@@ -1,0 +1,63 @@
+{
+  "agencies": [
+    {
+      "id": "khouribga-main",
+      "name": {
+        "fr": "Agence Principale - Khouribga",
+        "en": "Main Agency - Khouribga",
+        "ar": "الوكالة الرئيسية - خريبكة"
+      },
+      "address": "1, Rue d'Agadir, Centre Ville",
+      "city": {
+        "fr": "Khouribga",
+        "en": "Khouribga",
+        "ar": "خريبكة"
+      },
+      "postalCode": "25000",
+      "region": {
+        "fr": "Béni Mellal-Khénifra",
+        "en": "Béni Mellal-Khénifra",
+        "ar": "بني ملال خنيفرة"
+      },
+      "country": "Maroc",
+      "phones": ["+212 5 23 49 26 22", "+212 5 23 49 20 33"],
+      "fax": "+212 5 23 49 41 15",
+      "email": "hefiri@menara.ma",
+      "gps": {
+        "lat": 32.88220842030078,
+        "lng": -6.91396665058744
+      },
+      "mapsUrl": "https://www.google.com/maps?q=32.88220842030078,-6.91396665058744",
+      "hours": {
+        "fr": "Lun - Ven : 8h30 - 18h00 | Sam : 9h00 - 13h00",
+        "en": "Mon - Fri: 8:30 AM - 6:00 PM | Sat: 9:00 AM - 1:00 PM",
+        "ar": "الاثنين - الجمعة: 8:30 - 18:00 | السبت: 9:00 - 13:00"
+      },
+      "isMain": true,
+      "whatsapp": "+212 5 23 49 26 22"
+    }
+  ],
+  "company": {
+    "name": "Assurances Hefiri Zineb S.A.R.L.",
+    "legalForm": "S.A.R.L.",
+    "founded": 2004,
+    "capital": "1 000 000 MAD",
+    "rc": "701 Khouribga",
+    "ice": "001537302000019",
+    "director": "Mme Zineb Hefiri",
+    "activity": {
+      "fr": "Courtier d'assurances",
+      "en": "Insurance Broker",
+      "ar": "وسيط تأمين"
+    },
+    "employees": "1-9",
+    "employeesRange": {
+      "fr": "De 1 à 9 salariés",
+      "en": "1 to 9 employees",
+      "ar": "من 1 إلى 9 موظفين"
+    }
+  },
+  "_comments": {
+    "additionalAgencies": "Information à compléter - Ajouter les agences supplémentaires ici avec le même format"
+  }
+}
