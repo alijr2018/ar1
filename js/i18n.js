@@ -42,11 +42,23 @@ const I18n = (function() {
   }
 
   /**
+   * Get base path for GitHub Pages compatibility
+   */
+  function getBasePath() {
+    const path = window.location.pathname;
+    // For GitHub Pages: extract repo name from path
+    // e.g., /ar1/ -> /ar1/
+    const match = path.match(/^(\/[^/]+\/)/);
+    return match ? match[1] : './';
+  }
+
+  /**
    * Load translations from JSON file
    */
   async function loadTranslations(lang) {
     try {
-      const response = await fetch(`locales/${lang}.json`);
+      const base = getBasePath();
+      const response = await fetch(`${base}locales/${lang}.json`);
       if (!response.ok) throw new Error(`Failed to load ${lang} translations`);
       const data = await response.json();
       translations[lang] = data;
@@ -63,7 +75,8 @@ const I18n = (function() {
   async function loadAgenciesData() {
     if (agenciesData) return agenciesData;
     try {
-      const response = await fetch('data/agencies.json');
+      const base = getBasePath();
+      const response = await fetch(`${base}data/agencies.json`);
       if (!response.ok) throw new Error('Failed to load agencies data');
       agenciesData = await response.json();
       return agenciesData;
