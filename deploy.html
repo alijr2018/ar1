@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déploiement GitHub Pages - Assurances Hefiri Zineb</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .deploy-page { padding-top: 100px; min-height: 100vh; background: var(--light); }
+    .deploy-container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .deploy-hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 3rem 2rem; border-radius: var(--radius-lg); margin-bottom: 2rem; text-align: center; }
+    .deploy-hero h1 { color: white; font-size: 2rem; margin-bottom: 0.5rem; }
+    .deploy-hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; margin: 0; }
+    .step-card { background: white; border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 1.5rem; box-shadow: var(--shadow); border-left: 4px solid var(--accent); }
+    .step-card .step-number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--accent); color: white; border-radius: 50%; font-weight: 700; margin-right: 0.75rem; flex-shrink: 0; }
+    .step-card h3 { display: flex; align-items: center; margin-bottom: 1rem; }
+    .step-card p { color: var(--text-light); line-height: 1.7; }
+    .step-card .btn { margin-top: 1rem; }
+    .warning-box { background: #fff3cd; border: 1px solid #ffc107; border-radius: var(--radius); padding: 1.2rem; margin-bottom: 1.5rem; display: flex; gap: 0.75rem; align-items: flex-start; }
+    .warning-box i { color: #856404; font-size: 1.2rem; margin-top: 2px; }
+    .warning-box p { margin: 0; color: #856404; font-size: 0.9rem; }
+    .success-box { background: #d4edda; border: 1px solid #28a745; border-radius: var(--radius); padding: 1.5rem; text-align: center; margin-top: 2rem; }
+    .success-box h3 { color: #155724; margin-bottom: 0.5rem; }
+    .success-box p { color: #155724; }
+    .code-block { background: var(--primary-dark); color: #a5d6ff; padding: 1rem 1.5rem; border-radius: var(--radius); font-family: 'Courier New', monospace; font-size: 0.85rem; overflow-x: auto; white-space: pre; margin: 1rem 0; }
+    .url-box { background: var(--light); border: 2px dashed var(--accent); border-radius: var(--radius); padding: 1rem; text-align: center; margin: 1rem 0; font-size: 1.1rem; font-weight: 600; color: var(--primary); }
+    html[dir="rtl"] .step-card { border-left: none; border-right: 4px solid var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">
+        <div class="logo-icon">HZ</div>
+        <div class="nav-brand-text">
+          <span class="brand-name">Assurances Hefiri Zineb S.A.R.L.</span>
+          <span class="brand-tagline">Guide de déploiement</span>
+        </div>
+      </a>
+      <div class="nav-right">
+        <a href="index.html" class="btn btn-primary" style="padding:0.5rem 1rem;font-size:0.85rem">
+          <i class="fas fa-arrow-left"></i> Retour au site
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="deploy-page">
+    <div class="deploy-container">
+      <div class="deploy-hero">
+        <h1><i class="fab fa-github"></i> Déploiement GitHub Pages</h1>
+        <p>Suivez ces étapes simples pour mettre votre site en ligne</p>
+      </div>
+
+      <div class="warning-box">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p><strong>Important :</strong> Le dépôt est actuellement <strong>privé</strong>. GitHub Pages nécessite un dépôt <strong>public</strong> (plan gratuit) pour fonctionner. Suivez l'étape 1 ci-dessous.</p>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="step-card">
+        <h3><span class="step-number">1</span> Rendre le dépôt PUBLIC</h3>
+        <p>Pour que GitHub Pages fonctionne avec un plan gratuit, le dépôt doit être visible publiquement.</p>
+        <p><strong>Comment faire :</strong></p>
+        <ol style="margin:0.5rem 0;padding-left:1.5rem;color:var(--text-light)">
+          <li>Allez dans les paramètres du dépôt</li>
+          <li>Descendez jusqu'à "Danger Zone" (tout en bas)</li>
+          <li>Cliquez "Change repository visibility"</li>
+          <li>Sélectionnez "Public" et confirmez</li>
+        </ol>
+        <a href="https://github.com/alijr2018/ar1/settings" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> Ouvrir les paramètres du dépôt
+        </a>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <h3><span class="step-number">2</span> Activer GitHub Pages</h3>
+        <p>Dans les paramètres du dépôt, activez le déploiement depuis la branche <code>main</code>.</p>
+        <p><strong>Configuration :</strong></p>
+        <ul style="margin:0.5rem 0;padding-left:1.5rem;color:var(--text-light)">
+          <li><strong>Source :</strong> Deploy from a branch</li>
+          <li><strong>Branch :</strong> <code>main</code></li>
+          <li><strong>Folder :</strong> <code>/ (root)</code></li>
+        </ul>
+        <a href="https://github.com/alijr2018/ar1/settings/pages" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> Ouvrir GitHub Pages
+        </a>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <h3><span class="step-number">3</span> Attendre le déploiement</h3>
+        <p>GitHub va construire et déployer votre site automatiquement. Cela prend généralement <strong>1 à 3 minutes</strong>.</p>
+        <p>Vous recevrez une notification par email quand le déploiement sera terminé.</p>
+      </div>
+
+      <!-- Result -->
+      <div class="success-box">
+        <h3><i class="fas fa-check-circle"></i> Votre site sera en ligne à :</h3>
+        <div class="url-box">
+          <a href="https://alijr2018.github.io/ar1/" target="_blank">https://alijr2018.github.io/ar1/</a>
+        </div>
+        <p style="font-size:0.85rem;margin-top:0.5rem">Le site supporte 3 langues : Français (défaut), English (?lang=en), العربية (?lang=ar)</p>
+      </div>
+
+      <!-- Alternative: GitHub Actions -->
+      <div class="step-card" style="margin-top:2rem;border-left-color:var(--secondary)">
+        <h3><i class="fab fa-github" style="color:var(--secondary);margin-right:0.5rem"></i> Alternative : GitHub Actions</h3>
+        <p>Pour un déploiement automatique à chaque modification, ajoutez ce workflow :</p>
+        <p><strong>Chemin :</strong> <code>.github/workflows/deploy-pages.yml</code></p>
+        <div class="code-block">name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4</div>
+        <a href="https://github.com/alijr2018/ar1/actions/new" target="_blank" class="btn btn-outline" style="margin-top:0.5rem">
+          <i class="fas fa-plus"></i> Créer un nouveau workflow
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-top:2rem;padding:1rem">
+        <a href="index.html" class="btn btn-outline">
+          <i class="fas fa-arrow-left"></i> Retour au site principal
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
