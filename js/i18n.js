@@ -267,29 +267,6 @@ const I18n = (function() {
       container.appendChild(card);
     });
 
-    // Also update the quote form agency selector
-    updateAgencySelectors(data.agencies);
-  }
-
-  /**
-   * Update agency selectors in forms
-   */
-  function updateAgencySelectors(agencies) {
-    document.querySelectorAll('.agency-select').forEach(select => {
-      const currentValue = select.value;
-      select.innerHTML = `<option value="">${t('quote.select_agency')}</option>`;
-      
-      agencies.forEach(agency => {
-        const option = document.createElement('option');
-        option.value = agency.id;
-        option.textContent = tAgency(agency, 'name');
-        select.appendChild(option);
-      });
-      
-      if (currentValue) {
-        select.value = currentValue;
-      }
-    });
   }
 
   /**
